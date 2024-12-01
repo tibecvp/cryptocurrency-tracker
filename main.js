@@ -156,7 +156,7 @@ $(document).ready(function () {
         } else {
             apiResponseData.sort((a, b) => b.market_cap - a.market_cap);
         }
-        localStorage.setItem("apiResponseData", apiResponseData); // Persist data in localStorage
+        localStorage.setItem("apiResponseData", JSON.stringify(apiResponseData)); // Persist data in localStorage
         displayCryptocurrencies;
     }
 
