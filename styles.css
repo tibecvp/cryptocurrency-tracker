@@ -61,3 +61,27 @@ body {
   .crypto-card button.favorite-btn:hover {
     background-color: darkgoldenrod;
   }
+
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 40px;
+  }
+
+  footer .info {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer p {
+    max-width: fit-content;
+    margin: 8px auto;
+  }
+
+  #preferences .controls {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }

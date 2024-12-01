@@ -12,19 +12,22 @@
     </header>
 
     <main>
-        <!-- Preferences Section -->
+      <!-- Preferences Section -->
       <section id="preferences">
         <h2>Preferences</h2>
-        <label>
-          <input type="checkbox" id="show-price-change" /> Show Price Change
-        </label>
-        <label>
-          Sort by:
-          <select id="sort-option">
-            <option value="market_cap_desc">Market Cap (Descending)</option>
-            <option value="market_cap_asc">Market Cap (Ascending)</option>
-          </select>
-        </label>
+        <div class="controls">
+            <label>
+              <input type="checkbox" id="show-price-change" /> Show Price Change
+            </label>
+            <label>
+              Sort by:
+              <select id="sort-option">
+                <option value="market_cap_desc">Market Cap (Descending)</option>
+                <option value="market_cap_asc">Market Cap (Ascending)</option>
+              </select>
+            </label>
+            <button id="refresh-data">Refresh Data</button>
+        </div>
       </section>
 
       <!-- Cryptocurrency Listing -->
@@ -41,6 +44,11 @@
     </main>
 
     <footer>
+      <div class="info">
+        <p>Front-End Web Development II</p>
+        <p>Assignment 2</p>
+        <p>Tiberio Calderon - C0941386</p>
+      </div>
       <p>&copy; 2024 Crypto Tracker</p>
     </footer>
 
