@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Tracker</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Real-Time Cryptocurrency Tracker</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Real-Time Cryptocurrency Tracker</h1>
+    </header>
 
-  <main>
-    <!-- Cryptocurrency Listing -->
-    <section id="crypto-listing">
-      <h2>Cryptocurrency Listing</h2>
-      <div id="crypto-container"></div>
-    </section>
+    <main>
+        <!-- Preferences Section -->
+      <section id="preferences">
+        <h2>Preferences</h2>
+        <label>
+          <input type="checkbox" id="show-price-change" /> Show Price Change
+        </label>
+        <label>
+          Sort by:
+          <select id="sort-option">
+            <option value="market_cap_desc">Market Cap (Descending)</option>
+            <option value="market_cap_asc">Market Cap (Ascending)</option>
+          </select>
+        </label>
+      </section>
 
-    <!-- Comparison Section -->
-    <section id="comparison">
-      <h2>Comparison</h2>
-      <div id="comparison-container"></div>
-    </section>
-  </main>
+      <!-- Cryptocurrency Listing -->
+      <section id="crypto-listing">
+        <h2>Cryptocurrency Listing</h2>
+        <div id="crypto-container"></div>
+      </section>
 
-  <footer>
-    <p>&copy; 2024 Crypto Tracker</p>
-  </footer>
+      <!-- Comparison Section -->
+      <section id="comparison">
+        <h2>Comparison</h2>
+        <div id="comparison-container"></div>
+      </section>
+    </main>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="main.js"></script>
-</body>
+    <footer>
+      <p>&copy; 2024 Crypto Tracker</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
