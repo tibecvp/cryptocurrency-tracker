@@ -19,6 +19,7 @@ $(document).ready(function () {
             success: (data) => {
                 apiResponseData = data; // Save fetched data in memory
                 localStorage.setItem("apiResponseData", JSON.stringify(data)); // Persist data in localStorage
+                sortData();
                 displayCryptocurrencies(); // Display the fetched data
             },
             error: () => alert("Error fetching cryptocurrency data"),
@@ -143,8 +144,20 @@ $(document).ready(function () {
         $("#sort-option").on("change", function () {
             preferences.sortOption = $(this).val();
             savePreferences();
+            sortData();
             displayCryptocurrencies();
         });
+    }
+
+    // Function to sort the data
+    function sortData() {
+        if (preferences.sortOption === 'market_cap_asc') {
+            apiResponseData.sort((a, b) => a.market_cap - b.market_cap);
+        } else {
+            apiResponseData.sort((a, b) => b.market_cap - a.market_cap);
+        }
+        localStorage.setItem("apiResponseData", apiResponseData); // Persist data in localStorage
+        displayCryptocurrencies;
     }
 
     // Restore comparison list from localStorage and update the UI
